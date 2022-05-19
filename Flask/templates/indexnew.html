@@ -1,0 +1,77 @@
+
+
+
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Fitness Prediction</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    </head>
+ <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Body Fitness Prediction</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+<style>
+    select {
+    
+	text-align-last:right;
+    padding-right: 125px;
+	width: 350px;
+	height: 25px;
+	margin-bottom: 10px;
+    }
+    option {
+  text-align: center;
+}
+     
+</style>
+<select id="sad" name="sad">
+<option value="">Is your mood is sad</option>
+    <option value="1">YES</option>
+    <option value="0">NO</option>
+  </select><br>
+  
+  <select id="neutral" name="neutral">
+  <option value="">Is your mood is neutral</option>
+    <option value="1">YES</option>
+    <option value="0">NO</option>
+  </select><br>
+ <select id="happy" name="happy"> 
+  <option value="">Is your mood is happy</option>
+    <option value="1">YES</option>
+    <option value="0">NO</option>
+  </select><br>
+
+<input class="form-input" type="text" name="step_count" placeholder="Enter the step counts"><br>
+
+<input class="form-input" type="text" name='calories_burned' placeholder="Enter the calories_burned"><br>
+
+
+<input class="form-input" type="text" name='hours_of_sleep' placeholder="Enter the hours of sleep"><br>
+
+
+<input class="form-input" type="text" name='weight_kg' placeholder="Enter your weight in kg"><br>
+
+                
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+       
+    </body>
+</html>
